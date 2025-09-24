@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaizen Mental Health</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+  <h1>Kaizen</h1>
+  <nav>
+    <button onclick="showSection('home')">Home</button>
+    <button onclick="showSection('chat')">Chatbot</button>
+    <button onclick="showSection('booking')">Booking</button>
+    <button onclick="showSection('resources')">Resources</button>
+    <button onclick="showSection('peer')">Peer Support</button>
+    <button onclick="showSection('admin')">Admin</button>
+  </nav>
+</header>
+
+<!-- Sections -->
+<section id="home" class="section active">
+  <h2>Welcome to Kaizen</h2>
+  <p>Your mental health companion at college. Explore, chat, and grow!</p>
+  <div class="quote-carousel" id="quoteCarousel"></div>
+</section>
+
+<section id="chat" class="section">
+  <h2>Chatbot</h2>
+  <div id="chatBox" class="chat-box"></div>
+  <input type="text" id="chatInput" placeholder="Ask about stress, sleep, motivation..." />
+  <button onclick="sendChat()">Send</button>
+</section>
+
+<section id="booking" class="section">
+  <h2>Book a Session</h2>
+  <input type="text" id="name" placeholder="Your Name">
+  <input type="date" id="date">
+  <input type="time" id="time">
+  <button onclick="submitBooking()">Book</button>
+  <div id="bookingList" class="list-card"></div>
+</section>
+
+<section id="resources" class="section">
+  <h2>Resources</h2>
+  <div id="resourceTabs">
+    <button onclick="showResourceTab('meditation')">Meditation</button>
+    <button onclick="showResourceTab('stress')">Stress Relief</button>
+    <button onclick="showResourceTab('mindfulness')">Mindfulness</button>
+  </div>
+  <div id="resourcesContent" class="list-card"></div>
+</section>
+
+<section id="peer" class="section">
+  <h2>Peer Support</h2>
+  <input type="text" id="peerInput" placeholder="Share your thoughts..." />
+  <button onclick="submitPeer()">Post</button>
+  <div id="peerList" class="list-card"></div>
+</section>
+
+<section id="admin" class="section">
+  <h2>Admin Dashboard</h2>
+  <canvas id="adminChart" width="400" height="200"></canvas>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>

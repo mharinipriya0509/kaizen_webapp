@@ -1,0 +1,56 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #FDE2FF, #E0F7FA, #FFF3E0);
+  color: #333;
+  margin: 0;
+  transition: background 0.5s;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(90deg, #A7C7E7, #4A4E69);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+nav button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 12px;
+  background: #fff;
+  color: #4A4E69;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+nav button:hover { background: #EDEDED; }
+
+.section { display: none; padding: 20px; min-height: 70vh; }
+.section.active { display: block; }
+
+.chat-box, .list-card {
+  max-height: 300px;
+  overflow-y: auto;
+  background: #EDEDED;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.chat-box p {
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 15px;
+  max-width: 70%;
+}
+
+.chat-box p:nth-child(odd) { background: #A7C7E7; color:white; align-self:flex-end;}
+.chat-box p:nth-child(even){ background:#4A4E69;color:white;align-self:flex-start;}
+
+input, button { padding: 10px; border-radius: 12px; margin:5px 0; }
+input { width: calc(100% - 22px); border:1px solid #A7C7E7; }
+button { background:#A7C7E7; color:white; border:none; cursor:pointer; }
+button:hover { background:#8FAAC1; }
+.quote-carousel { font-style: italic; margin-top: 15px; }
